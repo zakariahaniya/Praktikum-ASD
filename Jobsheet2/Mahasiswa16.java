@@ -38,7 +38,7 @@ public class Mahasiswa16 {
     }
 
     public Mahasiswa16() {
-
+        
     }
 
     public Mahasiswa16(String nm, String nim, double ipk, String kls) {
