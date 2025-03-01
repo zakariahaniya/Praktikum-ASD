@@ -27,7 +27,7 @@ public class MataKuliah16 {
         this.nama = sc.nextLine();
         System.out.print("SKS        : ");
         dummy = sc.nextLine();
-       this.sks = Integer.parseInt(dummy);
+        this.sks = Integer.parseInt(dummy);
         System.out.print("Jumlah Jam : ");
         dummy = sc.nextLine();
         this.jumlahJam = Integer.parseInt(dummy);
