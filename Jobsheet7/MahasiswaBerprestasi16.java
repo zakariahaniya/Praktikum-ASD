@@ -1,8 +1,13 @@
-package Jobsheet6;
+package Jobsheet7;
 
 public class MahasiswaBerprestasi16 {
-    Mahasiswa16 [] listMhs = new Mahasiswa16[5];
+    Mahasiswa16 [] listMhs;
     int idx;
+
+    MahasiswaBerprestasi16(int jumlah) {
+        listMhs = new Mahasiswa16[jumlah];
+        idx = 0;
+    }
 
     void tambah (Mahasiswa16 m) {
         if (idx < listMhs.length) {
@@ -56,5 +61,49 @@ public class MahasiswaBerprestasi16 {
             }
             listMhs[j] = temp;
         }
+    }
+
+    int sequentialSearching(double cari) {
+        int posisi = -1;
+        for (int j = 0; j < listMhs.length; j++) {
+            if (listMhs[j].ipk == cari) {
+                posisi = j;
+                break;
+            }
+        }
+        return posisi;
+    }
+
+    void tampilPosisi(double x, int pos) {
+        if (pos != -1) {
+            System.out.println("data mahasiswa dengan IPK : " + x + " ditemukan pada indeks " + pos);
+        } else {
+            System.out.println("data " + x + " tidak ditemukan");
+        }
+    }
+
+    void tampilDataSearch(double x, int pos) {
+        if (pos != -1) {
+            System.out.println("nim\t : " + listMhs[pos].nim);
+            System.out.println("nama\t : " + listMhs[pos].nama);
+            System.out.println("kelas\t : " + listMhs[pos].kelas);
+            System.out.println("ipk\t : " + x);
+        } else {
+            System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
+        }
+    }
+
+    int findBinerySearch(double cari, int left, int right) {
+        if (right >= left) {
+            int mid = (left + right) / 2;
+            if (listMhs[mid].ipk == cari) {
+                return mid;
+            } else if (listMhs[mid].ipk < cari) {
+                return findBinerySearch(cari, left, mid - 1);
+            } else {
+                return findBinerySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
     }
 }

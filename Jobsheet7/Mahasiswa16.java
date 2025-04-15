@@ -1,4 +1,4 @@
-package Jobsheet6;
+package Jobsheet7;
 import java.util.Scanner;
 public class Mahasiswa16 {
     Scanner sc = new Scanner(System.in);
