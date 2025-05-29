@@ -56,7 +56,7 @@ public class MahasiswaDemo16 {
                     stack.print();
                     break;
                 case 5:
-                    stack.printTop();
+                    stack.jumlahTugas();
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");

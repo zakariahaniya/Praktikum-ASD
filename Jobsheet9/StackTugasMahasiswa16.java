@@ -72,7 +72,7 @@ public class StackTugasMahasiswa16 {
         }
     }
 
-    public void printTop() {
+    public void jumlahTugas() {
         if (!isEmpty()) {
             System.out.println("Jumlah Tugas Terkumpul: " + (top + 1));
         } else {
